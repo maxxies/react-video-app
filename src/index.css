@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* background: whitesmoke; */
+}
+
+.form-modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 10;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+.form-big-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.form-modal {
+    position: fixed;
+    background-color: whitesmoke;
+    width: 40%;
+    /*height: 50%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    border-radius: 10px;
+    z-index: 11;
+}
+
+.form-modal-inner-confirm {
+    font-size: 15px;
+    padding: 10px 30px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    font: 200;
+    margin-bottom: 0.1rem;
+}
+
+.form-modal-box p {
+    width: 100%;
+    font: 100;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #092e46;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.form-modal-box {
+    display: block;
+    margin-top: -0.12rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+.form-modal h1 {
+    color: #27606e;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
