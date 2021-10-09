@@ -1,14 +1,18 @@
 import React from "react";
-import "./MyList.css";
+import "./Category.css";
+import { BsArrowLeft } from "react-icons/bs";
 import LongVideoCard from "../Components/LongVideoCard";
 
-function MyList() {
+function Category() {
     return (
         <main className="home-body">
-            <div className="mylist-title">
-                <h2>Your videos</h2>
+            <div className="back-arrow">
+                <BsArrowLeft />
             </div>
-            <div className="mylist-videos">
+            <div className="category-page-title">
+                <h2>Category</h2>
+            </div>
+            <div className="category-videos">
                 <LongVideoCard />
                 <LongVideoCard />
                 <LongVideoCard />
@@ -19,5 +23,4 @@ function MyList() {
         </main>
     );
 }
-
-export default MyList;
+export default Category;

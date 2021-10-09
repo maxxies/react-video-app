@@ -1,8 +1,7 @@
 import React from "react";
 import "./Home.css";
-import VideoImage from "../images/red-velvet-cake-dark-background-close-up-side-view-sweet-dessert-holiday_116377-449.jpg";
-import playImage from "../images/button-icon-png-21060.png";
-import { BsArrowRight } from "react-icons/bs";
+import ShortVideoCard from "../Components/ShortVideoCard";
+import CategoryCard from "../Components/CategoryCard";
 
 function Home() {
     return (
@@ -17,282 +16,27 @@ function Home() {
                 />
                 <input type="submit" name="submit" className="search-btn" />
             </form>
-            <div className="category-video">
-                <div>
-                    <div className="category-title">
-                        <h2>Category 1</h2>
-                        <i>
-                            <BsArrowRight />
-                        </i>
-                    </div>
-
-                    <div className="video-container">
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="category-video">
-                <div>
-                    <div className="category-title">
-                        <h2>Category 1</h2>
-                        <i>
-                            <BsArrowRight />
-                        </i>
-                    </div>
-
-                    <div className="video-container">
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="category-video">
-                <div>
-                    <div className="category-title">
-                        <h2>Category 1</h2>
-                        <i>
-                            <BsArrowRight />
-                        </i>
-                    </div>
-
-                    <div className="video-container">
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="category-video">
-                <div>
-                    <div className="category-title">
-                        <h2>Category 1</h2>
-                        <i>
-                            <BsArrowRight />
-                        </i>
-                    </div>
-
-                    <div className="video-container">
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                        <div className="single-video-container">
-                            <div className="single-video-card">
-                                <img src={VideoImage} alt="" />
-                                <img
-                                    src={playImage}
-                                    className="play-btn"
-                                    alt=""
-                                />
-                                <h3>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Doloribus, dolore!
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <CategoryCard>
+                {" "}
+                <ShortVideoCard />
+                <ShortVideoCard />
+                <ShortVideoCard />
+                <ShortVideoCard />
+            </CategoryCard>
+            <CategoryCard>
+                {" "}
+                <ShortVideoCard />
+                <ShortVideoCard />
+                <ShortVideoCard />
+                <ShortVideoCard />
+            </CategoryCard>
+            <CategoryCard>
+                {" "}
+                <ShortVideoCard />
+                <ShortVideoCard />
+                <ShortVideoCard />
+                <ShortVideoCard />
+            </CategoryCard>
         </main>
     );
 }

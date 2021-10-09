@@ -108,7 +108,7 @@ function MainNavigation() {
                             <b></b>
                             <Link
                                 className={classes.link}
-                                to="/home"
+                                to="/help"
                                 onClick={() => changePage("Help")}
                             >
                                 <span className={classes.icon}>
