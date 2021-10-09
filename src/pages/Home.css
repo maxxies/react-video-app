@@ -53,11 +53,11 @@
     background-color: #4d84e2;
 }
 .single-video-container {
-    width: 290px;
+    width: 280px;
     position: relative;
     background-color: #f0efef;
     padding: 20px;
-    margin: 20px 0 0 5px;
+    margin: 20px 0 0 10px;
     border-radius: 10px;
     cursor: pointer;
     display: block;
@@ -151,7 +151,6 @@
 }
 .category-video {
     margin-top: 10px;
-
     border-radius: 20px;
     height: 24rem;
 }
