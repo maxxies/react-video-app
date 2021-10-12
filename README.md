@@ -28,3 +28,15 @@
 - Loaded videos from redux store to Home page
 - Linked Home page to category page.
 - Set state usage for the Mylist page.
+
+
+** Final Phase **
+(Mon, 5hrs/day)
+
+- Linked various videos of categories into the category page for display.
+- Linked videos to the play video page from varios pages.
+- Set up actions to remove and add videos to the My list page and display information accordingly on the buttons.(add and remove);
+- Set up message form in Help page and linkeed to a database.
+- Set up validations of users logging in with data from database.
+- Set up a post to database for users signing up.
+- Linked pages respectively.
