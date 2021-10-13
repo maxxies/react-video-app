@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Gowun+Batang&family=Kodchasan:wght@200&family=Open+Sans+Condensed:wght@300&family=Quicksand:wght@300&family=Source+Sans+Pro:wght@300&display=swap");
+
 .home-body {
     /* background: #333; */
     background: rgb(250, 252, 252);
     margin: 5px 0 0 99px;
     min-height: 100vh;
     padding: 20px;
-    overflow: hidden;
 }
 .mylist-title {
     width: 90%;
@@ -14,8 +15,7 @@
 
 .mylist-title h2 {
     font-size: 30px;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-family: "Open Sans Condensed", sans-serif;
     color: #4d5bf9;
     padding-top: 5px;
 }
@@ -34,7 +34,7 @@
     margin-left: 450px;
     margin-top: 10px;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Kodchasan", sans-serif;
 }
 .category-container {
     width: 100%;
@@ -97,8 +97,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-family: "Quicksand", sans-serif;
 }
 .category-post-description {
+    font-family: "Dosis", sans-serif;
     position: relative;
     top: -0.3rem;
     right: 28rem;
@@ -124,7 +126,7 @@
     border-radius: 0.8rem;
     text-decoration: none;
     border: none;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-family: "Source Sans Pro", sans-serif;
     cursor: pointer;
 }
 .category-post-button:hover {

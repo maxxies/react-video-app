@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
-
 import { VscHome, VscSignOut } from "react-icons/vsc";
 import { MdPlaylistPlay } from "react-icons/md";
 import { BiHelpCircle } from "react-icons/bi";
@@ -12,9 +11,11 @@ function MainNavigation() {
     const [page, pagehandler] = useState("Home");
     const [toggle, togglehandler] = useState(false);
 
+    //Handles page change in the navigation menu
     function changePage(newPage) {
         pagehandler(newPage);
     }
+    //Handles open and close of navigation menu
     function changeToggle(toggle) {
         togglehandler(!toggle);
     }
@@ -85,7 +86,7 @@ function MainNavigation() {
                             <b></b>
                             <Link
                                 className={classes.link}
-                                to="/home"
+                                to="/setting"
                                 onClick={() => changePage("Setting")}
                             >
                                 <span className={classes.icon}>
@@ -131,7 +132,7 @@ function MainNavigation() {
                             <b></b>
                             <Link
                                 className={classes.link}
-                                to="/home"
+                                to="/"
                                 onClick={() => changePage("Logout")}
                             >
                                 <span className={classes.icon}>

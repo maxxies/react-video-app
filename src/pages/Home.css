@@ -1,17 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Charmonman:wght@700&family=Raleway:wght@300&family=Scheherazade+New&display=swap");
+
 .home-body {
     /* background: #333; */
     background: rgb(250, 252, 252);
     margin: 5px 0 0 99px;
     min-height: 100vh;
     padding: 20px;
-    overflow: hidden;
 }
 .heading {
     width: 80%;
     height: 55px;
     padding-left: 30px;
     font-size: 45px;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-family: "Charmonman", cursive;
+
     color: #4481eb;
     margin-bottom: 5px;
 }
@@ -90,8 +92,10 @@
     height: 170px;
 }
 .single-video-card h3 {
+    color: #020813;
     font-size: 1.2rem;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+    font-family: "Scheherazade New", serif;
     width: 250px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -125,8 +129,7 @@
 .category-title {
     height: 45px;
     color: #071c41;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
+    font-family: "Raleway", sans-serif;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;

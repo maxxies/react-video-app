@@ -3,14 +3,17 @@ import "./Startpage.css";
 import FormErrorModal from "../../Components/FormErrorModal";
 import SignIn from "./images/undraw_welcome_cats_thqn.svg";
 import SignUp from "./images/undraw_authentication_fsn5.svg";
+import { useHistory } from "react-router-dom";
 
 function Startpage() {
+    const history = useHistory();
     /*Code below handles switch in startpages and modal */
     //States
     const [changePage, changePageHandler] = useState(true);
     const [errorMessages, errorMessageHandler] = useState([]);
     const [errorMessagesTwo, errorMessageTwoHandler] = useState([]);
     const [modalChange, modalChangehandler] = useState(false);
+    const [accountError, accountErrorHandler] = useState(false);
     //Handles close of modal
     function closeModal() {
         modalChangehandler(false);
@@ -24,7 +27,7 @@ function Startpage() {
         changePageHandler(false);
     }
 
-    /* Code below handles user inputs, checks and form submissions */
+    /* Code below handles user inputs, checks and submits form*/
     // User sign in refs
     const signinUser = useRef();
     const signinPassword = useRef();
@@ -34,6 +37,7 @@ function Startpage() {
     const signupPassword = useRef();
     const signupPasswordconfirm = useRef();
 
+    //handles modal for errors
     useEffect(() => {
         if (errorMessages.length > 0) {
             modalChangehandler(true);
@@ -45,22 +49,31 @@ function Startpage() {
         }
     }, [errorMessagesTwo]);
 
+    useEffect(() => {
+        setTimeout(() => {
+            accountErrorHandler(false);
+        }, 3000);
+    }, [accountError]);
+
     function submitSigninHandler() {
         errorMessageHandler([]);
         errorMessageTwoHandler([]);
+        //Sign in inputs
         let enteredSignInName = signinUser.current.value;
         let enteredSignInPassword = signinPassword.current.value;
 
+        //Sign up inputs
         let enteredSignUpName = signupUser.current.value;
         let enteredSignUpEmail = signupEmail.current.value;
         let enteredSignUpPassword = signupPassword.current.value;
         let enteredSignUpPasswordconfirm = signupPasswordconfirm.current.value;
 
-        // Checks for errors in entered values
+        // Form validation for pages
         let count = 0;
         var pattern = /^[a-zA-Z ]+$/;
         var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-        //Sign in value checks
+
+        //Checks sign in user details
         if (changePage) {
             if (enteredSignInName === "") {
                 errorMessageHandler((oldaArray) => [
@@ -111,7 +124,7 @@ function Startpage() {
             } else {
                 count++;
             }
-            //Sign up values ckeck
+            // Checks user sign up details
         } else {
             if (enteredSignUpName === "") {
                 errorMessageTwoHandler((oldaArray) => [
@@ -201,12 +214,54 @@ function Startpage() {
             email: enteredSignUpEmail,
             password: enteredSignUpPassword,
         };
-        //Outputs sign in details when successful
+        //Checks dadtabase for user
         if (count === 2 && changePage === true) {
-            console.log(signinData);
-        } //Outputs sign up details when successful
+            fetch(
+                "https://video-app-d61c2-default-rtdb.firebaseio.com/users.json",
+            )
+                .then((response) => response.json())
+                .then((data) => {
+                    const users = [];
+                    for (const key in data) {
+                        const user = {
+                            id: key,
+                            ...data[key],
+                        };
+                        users.push(user);
+                    }
+                    if (
+                        users.some(
+                            (obj) =>
+                                obj.name === signinData.name &&
+                                obj.password === signinData.password,
+                        ) === true
+                    ) {
+                        console.log(signinData);
+                        history.replace("/home");
+                    } else {
+                        //When user was not found
+                        accountErrorHandler(true);
+                    }
+                });
+        }
+        //sends user details to database
         else if (count === 4 && changePage === false) {
-            console.log(signupData);
+            fetch(
+                "https://video-app-d61c2-default-rtdb.firebaseio.com/users.json", //https://video-app-d61c2-default-rtdb.firebaseio.com/messages.json
+                {
+                    method: "POST",
+                    body: JSON.stringify(signupData),
+                    headers: {
+                        "Content-type": "application/json",
+                    },
+                },
+            )
+                .then(() => {
+                    history.replace("/home");
+                })
+                .catch((error) => {
+                    alert("Something went wrong. ", error.message);
+                });
         }
     }
 
@@ -232,7 +287,11 @@ function Startpage() {
                         className="sign-in-form"
                     >
                         <h2 className="title">Sign In</h2>
-                        {/* <div className="server-message"></div> */}
+                        {accountError && (
+                            <div className="server-message">
+                                Account not found
+                            </div>
+                        )}
                         <div className="input-field">
                             <input
                                 type="text"

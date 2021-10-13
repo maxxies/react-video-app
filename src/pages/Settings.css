@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Dorsa&family=Open+Sans+Condensed:wght@300&family=Tulpen+One&display=swap");
+
+.home-body {
+    /* background: #333; */
+    background: rgb(250, 252, 252);
+    margin: 5px 0 0 99px;
+    min-height: 100vh;
+    padding: 20px;
+}
+.settings-title {
+    width: 90%;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.settings-title h2 {
+    font-size: 30px;
+
+    font-family: "Open Sans Condensed", sans-serif;
+
+    padding-top: 5px;
+}
+
+.settings-items {
+    display: block;
+    width: 40%;
+    margin: 20px auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: rgb(245, 244, 244);
+    border-radius: 10px;
+    padding: 3r0px;
+}
+.settings-items h3 {
+    font-family: "Dorsa", sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #4d5bf9;
+    border-bottom: 2px solid;
+    position: relative;
+}
+
+.settings-items ul {
+    text-decoration: none;
+}
+.settings-items ul li {
+    font-size: 1.5rem;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    color: black;
+    font-family: "Tulpen One", cursive;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import "../index.css";
 
 function FormErrorModal(props) {
+    //maps messages to html tags for display
     const messages = props.messages.map((item, i) => <p key={i}>{item}</p>);
 
     return (

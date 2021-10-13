@@ -7,7 +7,33 @@ body {
     -moz-osx-font-smoothing: grayscale;
     /* background: whitesmoke; */
 }
-
+.home-loading-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 10;
+    visibility: visible;
+    opacity: 1;
+}
+.loading-spinner {
+    position: fixed;
+    width: 40%;
+    /*height: 50%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    border-radius: 10px;
+    z-index: 11;
+}
 .form-modal-bg {
     position: fixed;
     top: 0;
