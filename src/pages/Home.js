@@ -4,7 +4,7 @@ import spinner from "../images/loading-gif.gif";
 import CategoryCard from "../Components/CategoryCard";
 import { connect, useDispatch } from "react-redux";
 import { searchVideo } from "../redux/Actions.js";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const mapStateToProps = (state) => {
     return {
@@ -17,6 +17,7 @@ const mapStateToProps = (state) => {
 function Home(props) {
     const search = useRef();
     const dispatch = useDispatch();
+    const history = useHistory();
 
     //Dispalys a loading view when app is fetching videodata from database
     if (props.loading) {
@@ -54,12 +55,14 @@ function Home(props) {
 
     //Function handles input text fro submission for search to be made
     function handleSearch() {
-        const searchvideo = search.current.value;
+        var searchvideo = search.current.value;
         if (searchvideo !== "") {
             //Checks if vlaue is empty
             dispatch(searchVideo(searchvideo));
+            history.replace("/search");
         } else {
             alert("The search field is required");
+            searchvideo = "";
         }
     }
     return (
@@ -73,14 +76,13 @@ function Home(props) {
                     className="search-bar"
                     ref={search}
                 />
-                <Link to="/search">
-                    <input
-                        type="submit"
-                        name="submit"
-                        className="search-btn"
-                        onClick={() => handleSearch()}
-                    />
-                </Link>
+
+                <input
+                    type="submit"
+                    name="submit"
+                    className="search-btn"
+                    onClick={() => handleSearch()}
+                />
             </form>
             {categoryCard}
         </main>
