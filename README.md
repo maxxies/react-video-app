@@ -40,3 +40,23 @@
 - Set up validations of users logging in with data from database.
 - Set up a post to database for users signing up.
 - Linked pages respectively.
+
+** Images of app **
+--SignIn and SignUp pages
+![Screenshot 2021-11-16 001357](https://user-images.githubusercontent.com/59958815/141873478-1c37824c-c53e-4ffe-a182-6e7f13611a91.png)
+![Screenshot 2021-11-16 001548](https://user-images.githubusercontent.com/59958815/141873505-b894712b-4ec9-4db1-a194-c1ac4ef1eccf.png)
+--Home page
+![Screenshot 2021-11-16 001647](https://user-images.githubusercontent.com/59958815/141873524-0d448f12-6b71-416a-a450-d90306c68ba1.png)
+--Category page
+![Screenshot 2021-11-16 001740](https://user-images.githubusercontent.com/59958815/141873553-9a562078-3891-4b4c-ab16-2f4efad25956.png)
+--Mylist page
+![Screenshot 2021-11-16 001832](https://user-images.githubusercontent.com/59958815/141873572-d943d2f2-6e56-4834-bc91-ddcd7496dc56.png)
+--Settings page
+![Screenshot 2021-11-16 001916](https://user-images.githubusercontent.com/59958815/141873587-b18ff64c-e29c-4743-9483-d2923d72026a.png)
+--Help pages
+![Screenshot 2021-11-16 002008](https://user-images.githubusercontent.com/59958815/141873615-4358dc57-8abe-49e8-a063-5293937f8ff1.png)
+![Screenshot 2021-11-16 002100](https://user-images.githubusercontent.com/59958815/141873632-82865020-0cdd-44e8-982e-6c22afe718fd.png)
+--Search page
+![Screenshot 2021-11-16 002151](https://user-images.githubusercontent.com/59958815/141873671-4e8d0a6f-eb66-4a6c-8c88-5a2f2de1cbd7.png)
+
+
